@@ -1,3 +1,27 @@
+# Pizza
+By **Sana Zahlan** 
+
+## Technologies Used 
+* HTML 
+* CSS
+* Bootstrap 
+* JavaScript 
+* jQuery
+
+## Description 
+This application asks the user to choose the size of their pizza and add their favorite toppings, then calculates the price based on the selections and displays it to the user.
+
+## Setup & installation
+You can clone this repository, access the project folder on your computer and finally open the index.html file in your browser.
+
+## Known Bugs
+The toppings selected aren't successfully added to the toppings array, and therefore aren't included in the price.
+
+## License 
+MIT 
+
+Copyright (c) 2022 Sana Zahlan
+
 Describe: Pizza()
 
 Test: "It should return a pizza object with topping and size properties."
