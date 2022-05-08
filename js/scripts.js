@@ -22,19 +22,28 @@ Pizza.prototype.calculatePrice = function() {
 
 let customPizza = new Pizza([], "");
 
+function checkToppingValue(toppingName) {
+  if ($('input[type=checkbox][name=toppingName]:checked').val() != undefined) {
+    customPizza.toppings.push($("input[type=checkbox][name=toppingName]:checked").val());
+  }
+}
+
 $(document).ready(function() {
   $("#pizza").submit(function(event) {
     event.preventDefault();
     customPizza.size = $("input:radio[name=size]:checked").val();
 
-    customPizza.toppings.push($("input:checkbox[name=pepperoni]:checked").val())
-    customPizza.toppings.push($("input:checkbox[name=italian-sausage]:checked").val())
-    customPizza.toppings.push($("input:checkbox[name=bbq-chicken]:checked").val())
-    customPizza.toppings.push($("input:checkbox[name=mushrooms]:checked").val())
-    customPizza.toppings.push($("input:checkbox[name=green-peppers]:checked").val())
-    customPizza.toppings.push($("input:checkbox[name=black-olives]:checked").val())
-    customPizza.toppings.push($("input:checkbox[name=onions]:checked").val())
-    customPizza.toppings.push($("input:checkbox[name=diced-tomatoes]:checked").val())
-    
+    checkToppingValue("pepperoni");
+    checkToppingValue("italian-sausage");
+    checkToppingValue("bbq-chicken");
+    checkToppingValue("mushroom");
+    checkToppingValue("green-peppers");
+    checkToppingValue("black-olives");
+    checkToppingValue("onions");
+    checkToppingValue("diced-tomatoes");
+    const pizzaPrice = customPizza.calculatePrice();
+    $("#pizzaPrice").text(pizzaPrice);
+    $("#price").show();
+
   })
 })
