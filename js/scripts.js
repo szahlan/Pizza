@@ -20,11 +20,21 @@ Pizza.prototype.calculatePrice = function() {
 
 // User Interface Logic
 
-let customPizza = new Pizza();
+let customPizza = new Pizza([], "");
 
 $(document).ready(function() {
   $("#pizza").submit(function(event) {
     event.preventDefault();
-    customPizza.toppings.push($("input[type=checkbox][name=Pepperoni]:checked").val())
+    customPizza.size = $("input:radio[name=size]:checked").val();
+
+    customPizza.toppings.push($("input:checkbox[name=pepperoni]:checked").val())
+    customPizza.toppings.push($("input:checkbox[name=italian-sausage]:checked").val())
+    customPizza.toppings.push($("input:checkbox[name=bbq-chicken]:checked").val())
+    customPizza.toppings.push($("input:checkbox[name=mushrooms]:checked").val())
+    customPizza.toppings.push($("input:checkbox[name=green-peppers]:checked").val())
+    customPizza.toppings.push($("input:checkbox[name=black-olives]:checked").val())
+    customPizza.toppings.push($("input:checkbox[name=onions]:checked").val())
+    customPizza.toppings.push($("input:checkbox[name=diced-tomatoes]:checked").val())
+    
   })
 })
