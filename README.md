@@ -8,5 +8,5 @@ Describe: calculatePrice()
 
 Test: "It should return '$8' if the size is small"
 Code: const customPizza = new Pizza([], "Small");
-customPizza.caclulatePrice();
-Expected Output: "$8"
+customPizza.calculatePrice();
+Expected Output: Price = "$8"
