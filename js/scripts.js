@@ -23,7 +23,7 @@ Pizza.prototype.calculatePrice = function() {
 let customPizza = new Pizza([], "");
 
 function checkToppingValue(toppingName) {
-  if ($('input[type=checkbox][name=toppingName]:checked').val() != undefined) {
+  if ($("input[type=checkbox][name=toppingName]:checked").val() != undefined) {
     customPizza.toppings.push($("input[type=checkbox][name=toppingName]:checked").val());
   }
 }
@@ -34,13 +34,13 @@ $(document).ready(function() {
     customPizza.size = $("input:radio[name=size]:checked").val();
 
     checkToppingValue("pepperoni");
-    checkToppingValue("italian-sausage");
-    checkToppingValue("bbq-chicken");
+    checkToppingValue("italianSausage");
+    checkToppingValue("bbqChicken");
     checkToppingValue("mushroom");
-    checkToppingValue("green-peppers");
-    checkToppingValue("black-olives");
+    checkToppingValue("greenPeppers");
+    checkToppingValue("blackOlives");
     checkToppingValue("onions");
-    checkToppingValue("diced-tomatoes");
+    checkToppingValue("dicedTomatoes");
     const pizzaPrice = customPizza.calculatePrice();
     $("#pizzaPrice").text(pizzaPrice);
     $("#price").show();
