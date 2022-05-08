@@ -16,4 +16,7 @@ code: const customPizza = new Pizza([], "Medium");
 customPizza.calculatePrice();
 Expected Output: Price = "$10"
 
-
+Test: "It should retur '$12' if the size is large"
+code: const customPizza = new Pizza([], "Large");
+customPizza.calculatePrice();
+Expected Output: Price = "$12"
