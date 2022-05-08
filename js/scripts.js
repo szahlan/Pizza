@@ -9,6 +9,8 @@ Pizza.prototype.calculatePrice = function() {
     price = "$8";
   } else if (this.size === "Medium") {
       price = "$10";
+  } else if (this.size === "Large") {
+      price = "$12";
   }
   return price;
-}
+};
